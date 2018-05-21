@@ -25,6 +25,7 @@ typedef void(^RMUniversalAlertCompletionBlock)(RMUniversalAlert * __nonnull aler
                                          tapBlock:(nullable RMUniversalAlertCompletionBlock)tapBlock;
 
 + (nonnull instancetype)showActionSheetInViewController:(nonnull UIViewController *)viewController
+                                                 sender:(nonnull UIView *)sender
                                               withTitle:(nullable NSString *)title
                                                 message:(nullable NSString *)message
                                       cancelButtonTitle:(nullable NSString *)cancelButtonTitle

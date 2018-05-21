@@ -1,6 +1,14 @@
 RMUniversalAlert
 ================
 
+### Why do I fork [RMUniversalAlert](https://github.com/ryanmaxwell/RMUniversalAlert)?
+
+-- not work on iPad for some reason. Simplily Fix the bug and use below:
+
+```
+pod RMUniversalAlert, :git => 'https://github.com/wyanassert/RMUniversalAlert'
+```
+
 Wrapper class for UIAlertView / UIActionSheet / UIAlertController for targeting all iOS versions.
 
 RMUniversalAlert is a wrapper class that builds upon [UIAlertView+Blocks](https://github.com/ryanmaxwell/UIAlertView-Blocks), [UIActionSheet+Blocks](https://github.com/ryanmaxwell/UIActionSheet-Blocks), and [UIAlertController+Blocks](https://github.com/ryanmaxwell/UIAlertController-Blocks), and gives a simplified interface to support all iOS versions.
@@ -38,7 +46,7 @@ typedef void(^RMUniversalAlertCompletionBlock)(RMUniversalAlert *alert, NSIntege
 
 ## Usage - Alert Views
 
-The below code will show an alert on all iOS versions, and allow you to perform your logic in a single inline code path. 
+The below code will show an alert on all iOS versions, and allow you to perform your logic in a single inline code path.
 On iOS 8 and above, it will use UIAlertController - giving you red text on the destructive button. On iOS 7 and earlier, it will use a standard UIAlertView.
 
 ### Objective-C
@@ -87,10 +95,10 @@ iOS 6 and later. Since version 0.7 the headers use the new Objective-C [nullabil
 
 ## Usage - Action Sheet
 
-The below code will show an action sheet on all iOS versions, and allow you to perform your logic in a single inline code path. 
+The below code will show an action sheet on all iOS versions, and allow you to perform your logic in a single inline code path.
 On iOS 8 and above, it will use UIAlertController - giving you red text on the destructive button. On iOS 7 and earlier, it will use a standard UIActionSheet.
 
-The `popoverPresentationControllerBlock` allows you to configure the popover's source view/rect/bar button item if the action sheet will be on an iPad. 
+The `popoverPresentationControllerBlock` allows you to configure the popover's source view/rect/bar button item if the action sheet will be on an iPad.
 
 ### Objective-C
 
@@ -146,4 +154,4 @@ RMUniversalAlert.showActionSheetInViewController(self,
 
 ## Examples
 
-Download this project, navigate to `Tests` and run `pod install`. Open `RMUniversalAlert.xcworkspace`. 
+Download this project, navigate to `Tests` and run `pod install`. Open `RMUniversalAlert.xcworkspace`.

@@ -95,6 +95,7 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
 }
 
 + (instancetype)showActionSheetInViewController:(UIViewController *)viewController
+                                         sender:(nonnull UIView *)sender
                                       withTitle:(NSString *)title
                                         message:(NSString *)message
                               cancelButtonTitle:(NSString *)cancelButtonTitle
@@ -120,7 +121,8 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
                                                 popoverPresentationControllerBlock:^(UIPopoverPresentationController *popover){
                                                     if (popoverPresentationControllerBlock) {
                                                         RMPopoverPresentationController *configuredPopover = [RMPopoverPresentationController new];
-                                                        
+                                                        configuredPopover.sourceView = sender;
+                                                        configuredPopover.sourceRect = sender.frame;
                                                         popoverPresentationControllerBlock(configuredPopover);
                                                         
                                                         popover.sourceView = configuredPopover.sourceView;
