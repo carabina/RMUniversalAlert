@@ -6,9 +6,24 @@ RMUniversalAlert
 -- not work on iPad for some reason. Simplily Fix the bug and use below:
 
 ```
-pod RMUniversalAlert, :git => 'https://github.com/wyanassert/RMUniversalAlert'
+pod 'RMUniversalAlert-WY', '1.0.2'
 ```
 
+and more, use
+```
++ (nonnull instancetype)showActionSheetInViewController:(nonnull UIViewController *)viewController
+                                                 sender:(nonnull UIView *)sender
+                                              withTitle:(nullable NSString *)title
+                                                message:(nullable NSString *)message
+                                      cancelButtonTitle:(nullable NSString *)cancelButtonTitle
+                                 destructiveButtonTitle:(nullable NSString *)destructiveButtonTitle
+                                      otherButtonTitles:(nullable NSArray *)otherButtonTitles
+                     popoverPresentationControllerBlock:(void(^ __nullable)(RMPopoverPresentationController * __nonnull popover))popoverPresentationControllerBlock
+                                               tapBlock:(nullable RMUniversalAlertCompletionBlock)tapBlock;
+```
+for ActionSheet(add param `sender`). 
+
+----
 Wrapper class for UIAlertView / UIActionSheet / UIAlertController for targeting all iOS versions.
 
 RMUniversalAlert is a wrapper class that builds upon [UIAlertView+Blocks](https://github.com/ryanmaxwell/UIAlertView-Blocks), [UIActionSheet+Blocks](https://github.com/ryanmaxwell/UIActionSheet-Blocks), and [UIAlertController+Blocks](https://github.com/ryanmaxwell/UIAlertController-Blocks), and gives a simplified interface to support all iOS versions.
